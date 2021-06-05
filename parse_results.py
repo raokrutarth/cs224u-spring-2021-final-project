@@ -6,10 +6,17 @@ file_names = [
     "original-dataset",
     # "nell",
     # "docred",
-    "declarative",
-    "imperative",
-    "interrogative",
-    "exclamatory",
+    # "declarative",
+    # "imperative",
+    # "interrogative",
+    # "exclamatory",
+    "history",
+    "economics",
+    "science",
+    "arts",
+    "business",
+    "politics",
+    "sports",
 ]
 
 

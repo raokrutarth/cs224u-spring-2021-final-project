@@ -575,11 +575,57 @@ Examples of exclamatory sentences:
 
 ```
 
-## With only _ sentences in training corpus
+## With only History sentences in training corpus
 
 ### Grid search and results
 
 ```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.4288254448517488
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.15389732579947102
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.39103807984606204
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.1408594704071694
+----BEST SYSTEM----
+Best performing system score: 0.4288254448517488
+{'feauturizer': 'directional_bag_of_words_featurizer_original_system', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function directional_bag_of_words_featurizer_original_system at 0x7f576ae47c20>, 'factory_model': <function <lambda> at 0x7f5769c9df80>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.479      0.500      0.483        340       5716
+author                    0.551      0.782      0.586        509       5885
+capital                   0.384      0.295      0.362         95       5471
+contains                  0.658      0.843      0.688       3904       9280
+film_performance          0.567      0.710      0.591        766       6142
+founders                  0.412      0.611      0.441        380       5756
+genre                     0.256      0.388      0.275        170       5546
+has_sibling               0.354      0.525      0.378        499       5875
+has_spouse                0.342      0.702      0.381        594       5970
+is_a                      0.440      0.475      0.447        497       5873
+nationality               0.378      0.631      0.411        301       5677
+parents                   0.504      0.647      0.527        312       5688
+place_of_birth            0.345      0.511      0.369        233       5609
+place_of_death            0.248      0.421      0.270        159       5535
+profession                0.348      0.462      0.366        247       5623
+worked_at                 0.289      0.450      0.311        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.410      0.560      0.430       9248      95264
 ```
 
 ### Other relevant info
@@ -587,20 +633,67 @@ Examples of exclamatory sentences:
 Count of corpus examples:
 
 ```text
-
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 47,092 examples
 ```
 
-Examples of exclamatory sentences:
+Examples of sentences:
 
 ```text
-
+"any song contains louder bass Jumpstyle is a rave dance and electronic music genre mainly practiced in Europe , specifically the Netherlands , Belgium , Germany and northern France . The dance is also called Jumpen ( English word Jump + the Dutch and German suffix -en , meaning `` to jump '' or `` jumping '' ) . Jumpstyle also refers", "the 1980s and 1990s . In addition to mainstream pop , many Bacharach songs were adapted by jazz artists of the time , such as Stan Getz , Cal Tjader and Wes Montgomery . The Bacharach/David composition , `` My Little Red Book '' , originally recorded by Manfred Mann for the film What 's New , Pussycat ? , and promptly covered by Love", 'for people who suffer from gluten intolerance , since rice does not contain gluten . Rye flour is used to bake the traditional sourdough breads of Germany , Austria , Switzerland , Russia , Czech Republic , Poland and Scandinavia . Most rye breads use a mix of rye and wheat flours because rye', '. [ 19 ] [ 20 ] He was a member of The Literary Society . He was a non-executive independent director of Times Newspaper holdings , the publishers of The Times and The Sunday Times from 1982 . [ 21 ] Private life John Gross was married to Miriam Gross , also a prominent literary editor , from 1965 to 1988 . The couple had', 'belief ( on the street , anyway ) , this is not the breed of dog from the movie Beethoven . It is not the breed of dog from Turner and Hooch . It is , however , the breed of dog from The Sandlot . We are hopelessly devoted . View the entire comment thread . Search Follow this blog Creative Partners Recent Posts Pretty Flowers All In a Row ... Tutorial and'
 ```
 
-## With only Exclamatory sentences in training corpus
+## With only Economics sentences in training corpus
 
 ### Grid search and results
 
 ```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.20464742946053666
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12468643678932437
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.217286569898007
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12539387743410224
+----BEST SYSTEM----
+Best performing system score: 0.217286569898007
+{'feauturizer': 'simple_bag_of_words_featurizer', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function simple_bag_of_words_featurizer at 0x7f5783d50680>, 'factory_model': <function <lambda> at 0x7f5782a3e050>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.044      0.447      0.054        340       5716
+author                    0.305      0.737      0.346        509       5885
+capital                   0.065      0.305      0.077         95       5471
+contains                  0.490      0.793      0.530       3904       9280
+film_performance          0.243      0.243      0.243        766       6142
+founders                  0.224      0.624      0.257        380       5756
+genre                     0.130      0.312      0.147        170       5546
+has_sibling               0.292      0.297      0.293        499       5875
+has_spouse                0.265      0.343      0.278        594       5970
+is_a                      0.222      0.398      0.244        497       5873
+nationality               0.190      0.585      0.220        301       5677
+parents                   0.198      0.577      0.228        312       5688
+place_of_birth            0.209      0.253      0.217        233       5609
+place_of_death            0.124      0.289      0.140        159       5535
+profession                0.123      0.336      0.141        247       5623
+worked_at                 0.110      0.479      0.130        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.202      0.439      0.221       9248      95264
 ```
 
 ### Other relevant info
@@ -608,20 +701,67 @@ Examples of exclamatory sentences:
 Count of corpus examples:
 
 ```text
-
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 628 examples
 ```
 
-Examples of exclamatory sentences:
+Examples of sentences:
 
 ```text
-
+'folks pay the bill… so say Angela Merkel and the US Republicans … remember that this autumn when you vote . ______________________________ On Saturday , not only Greece , but also Europe , braced for an election that polls indicated would decimate the two main parties and fail to produce a clear winner , sparking market fears about', 'something to see . Made of polished granite and glass walls it certainly makes quite an impression . This beautiful building showcases an amazing view of the Columbia River Valley , the Cascades and Mt . St. Helens . It is no wonder that this building has received both national and international architectural awards . St. Anne ’ s Chapel This charming little red house once', 'style drew from many sources and transcends any one genre . Their rock-infused interpretation of the blues and folk genres also incorporated rockabilly , reggae , soul , funk , classical , Celtic , Indian , Arabic , pop , Latin and country . The band did not release the popular songs from their', 'are excluded by the dominant aesthetic . For examples of such subversion see : Antonioni , Chaplin , cinematheque , Eisenstein , pornography , Fellini , Godard , Klein , Monroe , underground , Warhol . Every art struggle is a struggle for legitimacy and distinction , and a class will most enthusiastically reject the taste of', 'far his best year , and his stats compare with the best pitchers in baseball . His ERA is 2.72 and his FIP has him behind only Stephen Strasburg and Gio Gonzalez from the Nationals . He ranks 3 rd in WAR behind only Justin Verlander and Felix Hernandez . On average , he is only allowing 1 base-runner to'
 ```
 
-## With only Exclamatory sentences in training corpus
+## With only Science sentences in training corpus
 
 ### Grid search and results
 
 ```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.4451328344631092
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.18367831107446178
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.4200982806475336
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.17057799807037458
+----BEST SYSTEM----
+Best performing system score: 0.4451328344631092
+{'feauturizer': 'directional_bag_of_words_featurizer_original_system', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function directional_bag_of_words_featurizer_original_system at 0x7f57436e67a0>, 'factory_model': <function <lambda> at 0x7f573f3a3a70>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.615      0.488      0.585        340       5716
+author                    0.489      0.792      0.530        509       5885
+capital                   0.383      0.463      0.396         95       5471
+contains                  0.655      0.870      0.689       3904       9280
+film_performance          0.570      0.718      0.594        766       6142
+founders                  0.399      0.616      0.429        380       5756
+genre                     0.265      0.412      0.285        170       5546
+has_sibling               0.402      0.661      0.436        499       5875
+has_spouse                0.356      0.709      0.395        594       5970
+is_a                      0.439      0.541      0.456        497       5873
+nationality               0.357      0.688      0.395        301       5677
+parents                   0.482      0.689      0.513        312       5688
+place_of_birth            0.334      0.554      0.363        233       5609
+place_of_death            0.250      0.478      0.276        159       5535
+profession                0.363      0.538      0.389        247       5623
+worked_at                 0.281      0.471      0.305        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.415      0.605      0.440       9248      95264
 ```
 
 ### Other relevant info
@@ -629,20 +769,67 @@ Examples of exclamatory sentences:
 Count of corpus examples:
 
 ```text
-
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 82,569 examples
 ```
 
-Examples of exclamatory sentences:
+Examples of sentences:
 
 ```text
-
+'7 References 8 External links [ edit ] Victims Christian moved from Louisiana to Tennessee with her family in 1997 . She was a graduate of Farragut High School and a senior majoring in sociology at the University of Tennessee . On January 12 , 2007 , her family released a statement to thank the Knoxville community “ for all their prayers and everything. ” A candlelight vigil was', "know the exact location where my SAYERS family originated in Ireland before they emigrated to Canada in the 1830s . Letterkenny is the largest town in County Donegal , in the province of Ulster , Ireland , and apparently was the home of many Ulster Scots . I 've mentioned before that I really have n't done much Irish research on my family ,", "a few years prior to the opening of his Walt Disney World dream project in Orlando , Florida . Childhood Walt Disney 's ancestors had emigrated from Gowran , County Kilkenny in Ireland . Arundel Elias Disney , great-grandfather of Walt Disney was born in Kilkenny , Ireland in 1801 and was a descendant of Hughes and his", "on the violin , Streep went through two months of intense training , four to six hours a day . [ 51 ] In addition , Streep appeared with Glenn Close in the movie version of Isabel Allende 's The House of the Spirits ; The River Wild ; Marvin 's Room ( with Diane Keaton and Leonardo DiCaprio ) ; and One True Thing . [ edit ] 2000s Main article :", 'Vrana , Romanian painter . Florica Prevenda , Romanian painter Manakis brothers ( Yanaki and Milton Manakia ) , film and photography ; pioneers in the Balkans , from Avdela , Prefecture of Grevena , Macedonia , Greece . * Mihai Tugearu , Romanian sculptor . Papaconstantin Tache , Roumanian Architect , Paris . Stere Gulea , Romanian film maker and Government official . Sultana Maitec , Romanian sculptor . Titi'
 ```
 
-## With only Exclamatory sentences in training corpus
+## With only Politics sentences in training corpus
 
 ### Grid search and results
 
 ```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.24948876366353895
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12034177267312561
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.2773979318160761
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12144287375559035
+----BEST SYSTEM----
+Best performing system score: 0.2773979318160761
+{'feauturizer': 'simple_bag_of_words_featurizer', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function simple_bag_of_words_featurizer at 0x7f57b04f2170>, 'factory_model': <function <lambda> at 0x7f57b04f2560>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.053      0.256      0.063        340       5716
+author                    0.401      0.709      0.439        509       5885
+capital                   0.113      0.263      0.128         95       5471
+contains                  0.526      0.665      0.549       3904       9280
+film_performance          0.413      0.614      0.442        766       6142
+founders                  0.283      0.458      0.307        380       5756
+genre                     0.158      0.329      0.177        170       5546
+has_sibling               0.151      0.393      0.173        499       5875
+has_spouse                0.259      0.579      0.291        594       5970
+is_a                      0.310      0.366      0.319        497       5873
+nationality               0.278      0.385      0.295        301       5677
+parents                   0.323      0.478      0.346        312       5688
+place_of_birth            0.159      0.262      0.173        233       5609
+place_of_death            0.150      0.302      0.167        159       5535
+profession                0.210      0.356      0.228        247       5623
+worked_at                 0.164      0.463      0.188        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.247      0.430      0.268       9248      95264
 ```
 
 ### Other relevant info
@@ -650,20 +837,67 @@ Examples of exclamatory sentences:
 Count of corpus examples:
 
 ```text
-
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 2,736 examples
 ```
 
 Examples of exclamatory sentences:
 
 ```text
-
+'choir at age 11 . [ 6 ] After she began performing alongside her mother in night clubs in the New York City area , she was discovered by Arista Records label head Clive Davis . Houston released seven studio albums and three movie soundtrack albums , all of which have diamond , multi-platinum , platinum , or gold certification . Houston was the only', "guitarist for the French Band AIR , ) played an evening of NIck Drake 's songs , narrating and praising Drake 's life story , at Pete 's Candy Store in Brooklyn , New York . I could go on and on about his history but i am sure you got the big picture . He was criticised for not including", "Ray Stevenson ) must band together and defeat the deadly trio of Cardinal Richelieu ( Christoph Waltz ) , the airship inventing Duke of Buckingham ( Orlando Bloom ) and deadly acrobatic assassin Milady de Winter ( Milla Jovovich ) . Yes , seriously . Frankly I 'm both shocked about the liberties taken with the source material , and very worried that impressionable young viewers will watch this", "produced , and stars Max Landis , son of Director John Landis . This hilarious geeked out short film includes celebrity cameos by Elijah Wood , Mandy Moore , Simon Pegg , Jennette McCurdy , and more ! You have to watch this comedic educational fanboy film about how Superman 's death ruined the concept of `` Death '' in", "psychic abilities ; he `` sees dead people , '' and is rather emotionally scarred by this ability . Dean : Hey , Sam , who do you think is a hotter psychic : Patricia Arquette , Jennifer Love Hewitt , or you ? Arquette plays psychic Allison DuBois in the TV series Medium ; Hewitt plays psychic Melinda Gordon in the TV series Ghost Whisperer"
 ```
 
-## With only Exclamatory sentences in training corpus
+## With only Arts sentences in training corpus
 
 ### Grid search and results
 
 ```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.49645218100377153
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.19045880638635942
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.48022941550195974
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.18402940642530696
+----BEST SYSTEM----
+Best performing system score: 0.49645218100377153
+{'feauturizer': 'directional_bag_of_words_featurizer_original_system', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function directional_bag_of_words_featurizer_original_system at 0x7f56eec8d4d0>, 'factory_model': <function <lambda> at 0x7f57814dfa70>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.650      0.497      0.612        340       5716
+author                    0.565      0.770      0.597        509       5885
+capital                   0.359      0.442      0.373         95       5471
+contains                  0.678      0.874      0.709       3904       9280
+film_performance          0.586      0.701      0.606        766       6142
+founders                  0.464      0.645      0.492        380       5756
+genre                     0.259      0.306      0.267        170       5546
+has_sibling               0.714      0.200      0.472        499       5875
+has_spouse                0.493      0.508      0.496        594       5970
+is_a                      0.459      0.493      0.465        497       5873
+nationality               0.437      0.684      0.471        301       5677
+parents                   0.731      0.506      0.672        312       5688
+place_of_birth            0.389      0.476      0.404        233       5609
+place_of_death            0.314      0.138      0.251        159       5535
+profession                0.414      0.437      0.418        247       5623
+worked_at                 0.498      0.426      0.481        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.501      0.507      0.487       9248      95264
 ```
 
 ### Other relevant info
@@ -671,13 +905,150 @@ Examples of exclamatory sentences:
 Count of corpus examples:
 
 ```text
-
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 119,251 examples
 ```
 
-Examples of exclamatory sentences:
+Examples of sentences:
 
 ```text
+'Providers Blog Request Information Survey About Contact Swedish Services & Products What Wikipedia says about Portland Portland is a city located in the Northwestern United States , near the confluence of the Willamette and Columbia rivers in the state of Oregon . As of July 2009 , it had an estimated population of 582,130 , [', "whole world is laughing about nazis ) at the anti nazi demonstration `` GrÀfenberg ist bunt '' ( GrÀfenberg is colorful ) at the market place of GrÀfenberg in Upper Franconia ( Bavaria , Germany ) on 18 . August 2007 . Date 18 August 2007 ( 2007-08-18 ) Source own photo taken by Daniel Arnold Author Daniel Arnold Permission", 'hall from the Sunday School classroom . And as for religious imagery , I would probably expect to see something along the lines of Georges Rouault or Marc Chagall but probably not a future Andres Serrano ( even though his Piss Christ makes a profound religious statement ) . But that certainly doesn ’ t mean that art in churches has to be all about sweetness', "in states such as Iowa , Illinois , Indiana , Kentucky , North Carolina , South Carolina , Tennessee , Georgia , Alabama , Mississippi , Louisiana , Texas , Oklahoma and Arkansas . `` Pecan '' is from an Algonquian word ,", 'north , to Ireland in the west , east to Poland and western Russia , [ 15 ] and south throughout the Balkans , in Italy , Spain and Portugal , and in Morocco and Algeria in north Africa . [ 24 ] In west Asia it has been reported from forests of northern Iran . [ 25 ] There'
+```
 
+## With only Sports sentences in training corpus
+
+### Grid search and results
+
+```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.3491694947950328
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12552670543165326
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.3367547630912586
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12250703965158546
+----BEST SYSTEM----
+Best performing system score: 0.3491694947950328
+{'feauturizer': 'directional_bag_of_words_featurizer_original_system', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function directional_bag_of_words_featurizer_original_system at 0x7f56cbd87950>, 'factory_model': <function <lambda> at 0x7f5783b7f320>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.081      0.656      0.099        340       5716
+author                    0.453      0.758      0.492        509       5885
+capital                   0.103      0.463      0.122         95       5471
+contains                  0.632      0.831      0.664       3904       9280
+film_performance          0.497      0.636      0.520        766       6142
+founders                  0.346      0.618      0.380        380       5756
+genre                     0.218      0.335      0.234        170       5546
+has_sibling               0.286      0.553      0.317        499       5875
+has_spouse                0.328      0.710      0.367        594       5970
+is_a                      0.384      0.451      0.395        497       5873
+nationality               0.351      0.561      0.380        301       5677
+parents                   0.413      0.612      0.442        312       5688
+place_of_birth            0.318      0.382      0.329        233       5609
+place_of_death            0.194      0.352      0.213        159       5535
+profession                0.311      0.482      0.334        247       5623
+worked_at                 0.265      0.463      0.290        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.324      0.554      0.349       9248      95264
+```
+
+### Other relevant info
+
+Count of corpus examples:
+
+```text
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 13,756 examples
+```
+
+Examples of sentences:
+
+```text
+'fur is not especially valuable . Range and habitat The ringtail is found in California , Colorado , eastern Kansas , Oklahoma , Oregon , Arizona , New Mexico , southern Nevada , Texas , Utah and throughout northern and central Mexico . Its distribution overlaps that of B. sumichrasti in the Mexican states of Guerrero , Oaxaca and', 'forms of crown authority , to be replaced by locally created authority . Virginia , South Carolina , and New Jersey created their constitutions before July 4 . Rhode Island and Connecticut simply took their existing royal charters and deleted all references to the crown . [ 56 ] The new states had to decide not only what', 'television and family-friendly comedies before achieving success as a dramatic actor portraying several notable roles , including Andrew Beckett in Philadelphia , the title role in Forrest Gump , Commander James A. Lovell in Apollo 13 , Captain John H. Miller in Saving Private Ryan , Michael Sullivan in Road to Perdition , and Sheriff Woody in Disney', 'made the Fabian Society pre-eminent . Husband of Beatrice Webb ( qv ) . 1859-1940 - George Lansbury - Politician , socialist , Christian pacifist & newspaper editor . P 1860-1926 - Emily Hobhouse - See below . Sister of Leonard Trelawny Hobhouse . Worked with Dame Milicent Fawcett . 1863-1935 - Arthur Henderson - Held many politcal offices . Chaired the Geneva Disarmament Conference in 1932-34 . 1934 1863-1937', 'confused . Here is what Wikipedia had to say about Clear Channel and Bain : Clear Channel Communications , Inc. is an American media conglomerate company headquartered in San Antonio , Texas . [ 3 ] It was founded in 1972 by Lowry Mays and Red McCombs , and was taken private by Bain Capital LLC and Thomas H .'
+```
+
+## With only Business sentences in training corpus
+
+### Grid search and results
+
+```text
+Experiment # 1
+ directional_bag_of_words_featurizer_original_system SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.19526684146986772
+Experiment # 2
+ directional_bag_of_words_featurizer_original_system NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12363516323097329
+Experiment # 3
+ simple_bag_of_words_featurizer SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False) 0.22090439824258562
+Experiment # 4
+ simple_bag_of_words_featurizer NearestCentroid(metric='euclidean', shrink_threshold=None) 0.12300252260366949
+----BEST SYSTEM----
+Best performing system score: 0.22090439824258562
+{'feauturizer': 'simple_bag_of_words_featurizer', 'factory': SGDClassifier(alpha=0.0001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None, penalty='l2',
+              power_t=0.5, random_state=None, shuffle=True, tol=0.001,
+              validation_fraction=0.1, verbose=0, warm_start=False), 'feauturizer_model': <function simple_bag_of_words_featurizer at 0x7f569c2bccb0>, 'factory_model': <function <lambda> at 0x7f5783b7f830>}
+relation              precision     recall    f-score    support       size
+------------------    ---------  ---------  ---------  ---------  ---------
+adjoins                   0.045      0.259      0.054        340       5716
+author                    0.230      0.521      0.259        509       5885
+capital                   0.065      0.232      0.076         95       5471
+contains                  0.504      0.706      0.535       3904       9280
+film_performance          0.300      0.431      0.319        766       6142
+founders                  0.209      0.295      0.222        380       5756
+genre                     0.142      0.265      0.156        170       5546
+has_sibling               0.261      0.303      0.269        499       5875
+has_spouse                0.220      0.475      0.247        594       5970
+is_a                      0.253      0.348      0.268        497       5873
+nationality               0.258      0.432      0.281        301       5677
+parents                   0.163      0.266      0.177        312       5688
+place_of_birth            0.142      0.318      0.160        233       5609
+place_of_death            0.132      0.314      0.149        159       5535
+profession                0.158      0.340      0.177        247       5623
+worked_at                 0.168      0.302      0.185        242       5618
+------------------    ---------  ---------  ---------  ---------  ---------
+macro-average             0.203      0.363      0.221       9248      95264
+```
+
+### Other relevant info
+
+Count of corpus examples:
+
+```text
+Corpus pre-filter:  Corpus with 266,759 examples
+Corpus post-filter:  Corpus with 727 examples
+```
+
+Examples of sentences:
+
+```text
+"Petaluma , offered a $ 200,000 reward for her safe return during the search for Polly Klaas ; after Klaas ' death , Ryder starred in a film version of Little Women and dedicated it to Klaas ' memory , the Louisa May Alcott novel having been Polly 's favorite book . The producers at first wanted to remove the dedication . Ryder then said she would not do any publicity for", 'Baart de la Faille ( 1970 ( 1970 ) ) [ 1928 ( 1928 ) ] The Works of Vincent van Gogh . His Paintings and Drawings . , Amsterdam : J.M . Meulenhoff , no . 646 . JH1686 : Jan Hulsker ( 1980 ) , The Complete Van Gogh , Oxford : Phaidon , no . 1686 . Source/Photographer repro from artbook Permission ( Reusing this file ) Public domain Public domain false', 'shirts , but she ’ s also a big Air Jordan / sneakerhead ! She also loves joking around , Jay-Z , Kanye , The Dream , Jeezy , Trey Songz , Eric Benet and Bobby Valentino just to name a few . It ’ s fans like Ericka that help motivate me to constantly make FFB EVEN better . And the pressure ’ s on , because I', 'somewhat after the latter . [ 9 ] His television career bloomed with , as well as Manimal , parts in series such as Dynasty , Fantasy Island , Hart to Hart , Matt Houston and The Dukes of Hazzard . [ 9 ] [ 8 ] [ 2 ] He also played David Clement , an aristocrat , in the mini-series Manions of America . [ 8 ] [ 2 ]', 'to account . On Al Jazeera English . Al Jazeera English ( AJE ) is a 24-hour English -language news and current affairs TV channel headquartered in Doha , Qatar . It is the sister channel of the Arabic-language Al Jazeera . The budget debate and the economy are the battleground on which the 2012 presidential election race will be fought . And the US has never']
 ```
 
 ## Unknown expriment during model development
